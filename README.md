@@ -9,8 +9,8 @@ Repozytorium ćwiczeń wykonanych na zaliczenie laboratorium z przedmiotu Narzę
 
 ### Klonowanie repozytorium
     ```bash
-    git clone https://github.com/twoja-nazwa-uzytkownika/nazwa-repozytorium.git
-    cd nazwa-repozytorium
+    git clone https://github.com/Chopparini/proj-zal-git
+    cd proj-zal-git
     ```
 
 ### Instalacja zależności
