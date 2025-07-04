@@ -7,18 +7,18 @@ Repozytorium ćwiczeń wykonanych na zaliczenie laboratorium z przedmiotu Narzę
 - (Opcjonalnie) virtualenv do tworzenia środowiska wirtualnego
 ## Instalacja
 
-# Klonowanie repozytorium
+### Klonowanie repozytorium
     ```bash
     git clone https://github.com/twoja-nazwa-uzytkownika/nazwa-repozytorium.git
     cd nazwa-repozytorium
     ```
 
-# Instalacja zależności
+### Instalacja zależności
     ```
     pip install -r requirements.txt
     ```
 
-# Użycie 
+### Użycie 
 uvicorn main:app --reload
 
 
