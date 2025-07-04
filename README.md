@@ -19,8 +19,9 @@ Repozytorium ćwiczeń wykonanych na zaliczenie laboratorium z przedmiotu Narzę
     ```
 
 ### Użycie 
-uvicorn main:app --reload
-
+    ```
+    uvicorn main:app --reload
+    ```
 
 ## Autorzy
 - Paulina Piotrowska – [GitHub](https://github.com/Chopparini)
