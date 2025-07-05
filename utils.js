@@ -10,9 +10,10 @@ if (!email || !email.trim().includes('@')) {
 if (!message || message.trim().length < 10) {
 errors.push('Wiadomość musi mieć co najmniej 10 znaków');
 }
+// zamiast { isValid, errors } zwracamy { success, issues }
 return {
-isValid: errors.length === 0,
-errors: errors
+  success: errors.length === 0,
+  issues: errors
 };
 }
 
