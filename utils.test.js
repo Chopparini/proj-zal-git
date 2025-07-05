@@ -1,4 +1,4 @@
-const { validateForm, validatePhone  } = require('./utils');
+const { validateForm, validatePhone, validatePassword  } = require('./utils');
 
 describe('Form validation', () => {
 test('should pass validation for valid data', () => {
@@ -36,3 +36,25 @@ describe('Phone validation (covers lines 21-22)', () => {
     expect(validatePhone('abc')).toBe(false);
   });
 });
+
+describe('Password validation', () => {
+  test('should accept strong password', () => {
+    expect(validatePassword('Abcd1234!')).toBe(true);
+  });
+
+  test('should reject password shorter than 8 characters', () => {
+    expect(validatePassword('abc')).toBe(false);
+  });
+
+  test('should reject password without uppercase letter', () => {
+    expect(validatePassword('abcd1234!')).toBe(false);
+  });
+
+  test('should reject password without number', () => {
+    expect(validatePassword('Abcdefgh!')).toBe(false);
+  });
+
+  test('should reject password without special character', () => {
+    expect(validatePassword('Abcd1234')).toBe(false);
+  });
+})

@@ -21,4 +21,18 @@ function validatePhone(phone) {
   const regex = /^\+?[0-9\s\-]{7,15}$/;
   return regex.test(phone);
 }
-module.exports = { validateForm, validatePhone };
+
+function validatePassword(password) {
+  if (
+    typeof password !== 'string' ||
+    password.length < 8 ||
+    !/[A-Z]/.test(password) ||      // wielka litera
+    !/[0-9]/.test(password) ||      // cyfra
+    !/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password) // znak specjalny
+  ) {
+    return false;
+  }
+  return true;
+}
+
+module.exports = { validateForm, validatePhone, validatePassword};
