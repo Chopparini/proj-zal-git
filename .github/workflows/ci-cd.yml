@@ -33,4 +33,6 @@ jobs:
          docker ps          # podgląd – czy kontener nadal działa?
          curl -f http://localhost:3000 || (echo "API error!" && exit 1)
          docker stop test-container
+      - name: Lint code
+        run: npm run lint
 
