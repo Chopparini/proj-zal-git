@@ -4,7 +4,6 @@ Dziękujemy za zainteresowanie współtworzeniem tego projektu!
 Poniżej znajdziesz krótkie wskazówki, jak efektywnie dołożyć swoją cegiełkę.
 
 ---
-
 ## 📥 Jak zgłosić problem (bug)
 
 1. Sprawdź, czy problem nie został już zgłoszony.
