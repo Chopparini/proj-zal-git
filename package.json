@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Repozytorium ćwiczeń wykonanych na zaliczenie laboratorium z przedmiotu Narzędzia do automatyzacji budowy oprogramowania",
   "main": "index.js",
+  
   "scripts": {
+    "start": "node main.js",
     "build": "echo 'No build step yet'",
     "test": "jest --coverage"
   },

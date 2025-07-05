@@ -1,0 +1,34 @@
+name: CI/CD with Docker
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+      - name: Install & test
+        run: |
+          npm ci
+          npm test
+
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t ${{ github.repository }}:${{ github.sha }} .
+      - name: Run & test container
+        run: |
+          docker run -d -p 3000:3000 --name test-container ${{ github.repository }}:${{ github.sha }}
+          sleep 10
+          curl -f http://localhost:3000 || (echo "API error!" && exit 1)
+          docker stop test-container
