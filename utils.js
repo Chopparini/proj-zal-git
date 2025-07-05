@@ -22,5 +22,3 @@ function validatePhone(phone) {
   return regex.test(phone);
 }
 module.exports = { validateForm, validatePhone };
-
-module.exports = { validateForm };

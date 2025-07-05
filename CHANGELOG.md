@@ -1,4 +1,4 @@
-# 📄 Changelog
+# Changelog
 
 ## [v2.0.0] - 2025-07-05
 ### Zmiany
