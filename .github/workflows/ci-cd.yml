@@ -28,7 +28,9 @@ jobs:
         run: docker build -t ${{ github.repository }}:${{ github.sha }} .
       - name: Run & test container
         run: |
-          docker run -d -p 3000:3000 --name test-container ${{ github.repository }}:${{ github.sha }}
-          sleep 10
-          curl -f http://localhost:3000 || (echo "API error!" && exit 1)
-          docker stop test-container
+         docker run -d -p 3000:3000 --name test-container ${{ github.repository }}:${{ github.sha }}
+         sleep 15
+         docker ps          # podgląd – czy kontener nadal działa?
+         curl -f http://localhost:3000 || (echo "API error!" && exit 1)
+         docker stop test-container
+
