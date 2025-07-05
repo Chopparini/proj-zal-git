@@ -4,6 +4,7 @@
   "description": "Repozytorium ćwiczeń wykonanych na zaliczenie laboratorium z przedmiotu Narzędzia do automatyzacji budowy oprogramowania",
   "main": "index.js",
   "scripts": {
+    "build": "echo 'No build step yet'",
     "test": "jest --coverage"
   },
   "keywords": [],
