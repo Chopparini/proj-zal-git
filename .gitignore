@@ -5,9 +5,22 @@ __pycache__/
 *.pyd
 *.so
 
+# Dependencies
+node_modules/
+
 # VSC
 .vscode/
 
 # logi i zmienne środowiskowe
 *.log
+npm-debug.log*
 **/.env
+.env.local
+.env
+
+# Build files
+dist/
+build/
+# OS files
+.DS_Store
+Thumbs.db
