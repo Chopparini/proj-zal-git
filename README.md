@@ -22,6 +22,15 @@ Repozytorium ćwiczeń wykonanych na zaliczenie laboratorium z przedmiotu Narzę
     ```
     uvicorn main:app --reload
     ```
+### Walidacja hasła
+
+Dodano funkcję `validatePassword(password)`, która sprawdza, czy hasło spełnia wymagania:
+
+- min. 8 znaków
+- przynajmniej jedna wielka litera
+- przynajmniej jedna cyfra
+- przynajmniej jeden znak specjalny
+
 
 ## Autorzy
 - Paulina Piotrowska – [GitHub](https://github.com/Chopparini)
